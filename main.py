@@ -13,7 +13,7 @@ def main():
         teams[team] = get_the_correct_input_for_no_of_wins_per_team(
             team, no_of_games_played_during_season
         )
-    games_to_be_played = []
+    games_to_be_played = generate_games(teams)
 
 
 def get_the_correct_input_for_no_of_teams():
@@ -76,6 +76,25 @@ def get_the_correct_input_for_no_of_wins_per_team(
                 f"The maximum number of wins is {no_of_games_played_during_season}, try again."
             )
     return current_input
+
+
+def generate_games(teams):
+    lists_of_games = []
+    list_of_teams = []
+    for team in teams:
+        list_of_teams.append([team, teams[team]])
+    list_of_teams.sort(key=lambda x: x[1])
+
+    left_pointer = 0
+    right_pointer = int(len(teams) - 1)
+
+    while left_pointer < right_pointer:
+        lists_of_games.append(
+            [list_of_teams[left_pointer][0], list_of_teams[right_pointer][0]]
+        )
+        left_pointer += 1
+        right_pointer -= 1
+    print(lists_of_games)
 
 
 if __name__ == "__main__":
