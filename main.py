@@ -4,7 +4,6 @@ teams = {}
 
 
 def main():
-
     no_of_teams_in_tournament = get_the_correct_input_for_no_of_teams()
     for team in range(no_of_teams_in_tournament):
         teams[get_the_correct_input_for_team_name()] = None
@@ -15,7 +14,6 @@ def main():
         teams[team] = get_the_correct_input_for_no_of_wins_per_team(
             team, no_of_games_played_during_season
         )
-    print(teams)
 
 
 def get_the_correct_input_for_no_of_teams():
@@ -77,7 +75,6 @@ def get_the_correct_input_for_no_of_wins_per_team(
             print(
                 f"The maximum number of wins is {no_of_games_played_during_season}, try again."
             )
-
     return current_input
 
 
