@@ -14,6 +14,7 @@ def main():
             team, no_of_games_played_during_season
         )
     games_to_be_played = generate_games(teams)
+    print_games(games_to_be_played)
 
 
 def get_the_correct_input_for_no_of_teams():
@@ -94,7 +95,12 @@ def generate_games(teams):
         )
         left_pointer += 1
         right_pointer -= 1
-    print(lists_of_games)
+    return lists_of_games
+
+
+def print_games(games_to_be_played):
+    for game in games_to_be_played:
+        print(f"Home: {game[0]} VS Away: {game[1]}")
 
 
 if __name__ == "__main__":
