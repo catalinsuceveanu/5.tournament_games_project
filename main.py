@@ -6,7 +6,6 @@ def main():
     no_of_teams_in_tournament = get_the_correct_input(x="no_of_teams")
     for team in range(no_of_teams_in_tournament):
         teams[get_the_correct_input("team_name", team + 1)] = None
-    print(teams)
 
 
 def get_the_correct_input(x, no=0):
