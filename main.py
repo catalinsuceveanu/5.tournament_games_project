@@ -1,6 +1,3 @@
-import processor
-
-
 def main():
     teams = {}
     no_of_teams = get_the_correct_input_for_no_of_teams()
