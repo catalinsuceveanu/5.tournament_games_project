@@ -1,8 +1,13 @@
-from io import StringIO
-from unittest.mock import patch
-from plays_generator import input_processor
+import input_processor
 import unittest
 
 
-class testInput_processor(unittest.TestCase):
-    pass
+class testInputProcessor(unittest.TestCase):
+    def test_get_the_correct_input_for_no_of_teams(self):
+        set_keyboard_input(["9", "7"])
+        input_processor.get_the_correct_input_for_no_of_teams()
+        expected_output = ">> 9 << is invalid. Please insert an evan positive number."
+
+
+if __name__ == "__main__":
+    unittest.main()
