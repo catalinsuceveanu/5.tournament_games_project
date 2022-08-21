@@ -4,7 +4,34 @@ During tournaments the organizers have to mix and match teams in plays which are
 There are a few important rules in doing so. Never match teams that are close in score from the beginning of the tournament (you want the closest and most spectacular at the end)
 
 This rule and a few others have been implemented in this tournament games generator.
-You can see an execution of this program below:
+You can see 2 executions of this program below:
+
+```python
+Enter the number of teams in the tournament: 1
+The minimum number of teams is 2, try again.
+Enter the number of teams in the tournament: 4
+Enter the name for team #1: Python
+Enter the name for team #2: Ruby
+Enter the name for team #3: JavaScript
+Enter the name for team #4: C
+Team names must have at least 2 characters, try again.
+Enter the name for team #4: C Is Great
+Team names may have at most 2 words, try again.
+Enter the name for Team #4: C#
+Enter the number of games played by each team: 2
+Invalid number of games. Each team plays each other at least once in the regular season, try again.
+Enter the number of games played by each team: 3
+Enter the number of wins Team Python had: 2 
+Enter the number of wins Team Ruby had: 1 
+Enter the number of wins Team JavaScript had: 0 
+Enter the number of wins Team C# had: -2
+The minimum number of wins is 0, try again.
+Enter the number of wins Team C# had: 3
+Generating the games to be played in the first round of the tournament...
+Home: JavaScript VS Away: C#
+Home: Ruby VS Away: Python
+```
+
 
 ```python
 Enter the number of teams in the tournament: 6
